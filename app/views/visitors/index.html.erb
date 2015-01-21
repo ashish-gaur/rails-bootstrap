@@ -1,0 +1,44 @@
+<h3>Coefficient</h3>
+
+<div id="container" class="theme1">
+  <div class="btn-group">
+    <div class="btn-group">
+      <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Dropdown <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">theme1</a></li>
+        <li><a href="#">theme2</a></li>
+        <li><a href="#">theme3</a></li>
+        <li><a href="#">theme4</a></li>
+        <li><a href="#">theme5</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <p> This button changes on the basis of theme applied on the container.</p>
+  <span><input type="button" class="btn" value="Theme Button"></span>
+<!--<div>-->
+  <!--<p>Extending theme1 into theme6</p>-->
+  <!--<span class="theme6"><input type="button" class="btn" value="Theme6 Button"></span>-->
+<!--</div>-->
+
+</div>
+<br/>
+<br/>
+<div>
+  <p> For reference themes are as follows:</p>
+  <span class="theme1"><input type="button" class="btn" value="Theme1 Button"></span>
+  <span class="theme2"><input type="button" class="btn" value="Theme2 Button"></span>
+  <span class="theme3"><input type="button" class="btn" value="Theme3 Button"></span>
+  <span class="theme4"><input type="button" class="btn" value="Theme4 Button"></span>
+  <span class="theme5"><input type="button" class="btn" value="Theme5 Button"></span>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".dropdown-menu li a").click(function(event) {
+      $('#container').removeClass();
+      $('#container').addClass($(this).html());
+      event.preventDefault();
+    });
+  });
+</script>
